@@ -12,7 +12,7 @@
     <config model="standalone" name="standalone.xml">
         <layers>
             <include name="cloud-server"/>
-            <include name="postgresql-driver"/>
+            <include name="postgresql-datasource"/>
         </layers>
     </config>
     <options>
