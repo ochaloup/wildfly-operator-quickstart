@@ -5,14 +5,15 @@
         <default-configs inherit="false"/>
         <packages inherit="false"/>
     </feature-pack>
-    <feature-pack location="org.wildfly:wildfly-datasources-galleon-pack:1.0.5.CD.Alpha1">
+    <!--<feature-pack location="org.wildfly:wildfly-datasources-galleon-pack:1.0.5.CD.Alpha2">-->
+    <feature-pack location="org.wildfly:wildfly-datasources-galleon-pack:1.0.6.CD.Alpha2-SNAPSHOT">
         <default-configs inherit="false"/>
         <packages inherit="false"/>
     </feature-pack>
     <config model="standalone" name="standalone.xml">
         <layers>
             <include name="cloud-server"/>
-            <include name="postgresql-driver"/>
+            <include name="oracle-driver"/>
         </layers>
     </config>
     <options>
