@@ -1,6 +1,8 @@
 #!/bin/sh
+echo "Executing .s2i/bin/assemble..."
 
 # the galleon pack is at /home/ochaloup/openshift/wildfly-datasources-galleon-pack
+echo ">>> Galleon pack datasources stuff"
 mkdir -p /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.6.CD.Alpha2-SNAPSHOT/
 cd /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.6.CD.Alpha2-SNAPSHOT/
 
@@ -11,6 +13,11 @@ curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHO
 
 cd -
 
+echo ">>> Original assemble to be run"
 # This assemble script overrides the default one
 # running the default assemble at the end here
 source /usr/local/s2i/assemble
+
+echo ">>> Creating directory /opt/eap/extenstions"
+mkdir /opt/eap/extensions
+cp -r /tmp/src/extensions/* /opt/eap/extensions
