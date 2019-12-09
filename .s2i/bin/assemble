@@ -20,4 +20,4 @@ source /usr/local/s2i/assemble
 
 echo ">>> Creating directory /opt/eap/extenstions"
 mkdir /opt/eap/extensions
-cp -r /tmp/src/extensions/* /opt/eap/extensions
+cp -r /tmp/src/extensions/* /opt/eap/extensions || echo "No extensions defined, nothing to be copied"
