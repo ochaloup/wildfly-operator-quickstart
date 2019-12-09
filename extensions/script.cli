@@ -1,0 +1,9 @@
+embed-server --timeout=30 --std-out=echo --server-config=standalone-openshift.xml
+
+batch
+/subsystem=transactions:write-attribute(name=use-jdbc-store, value=true)
+/subsystem=transactions:write-attribute(name=jdbc-store-datasource, value=java:/jboss/datasources/test_postgresql)
+/subsystem=transactions:write-attribute(name=jdbc-state-store-table-prefix, value=myprefixs
+run-batch
+
+stop-embedded-server
