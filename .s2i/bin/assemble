@@ -3,13 +3,20 @@ echo "Executing .s2i/bin/assemble..."
 
 # the galleon pack is at /home/ochaloup/openshift/wildfly-datasources-galleon-pack
 echo ">>> Galleon pack datasources stuff"
-mkdir -p /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.6.CD.Alpha2-SNAPSHOT/
-cd /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.6.CD.Alpha2-SNAPSHOT/
 
-curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.pom -O wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.pom
-curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.zip -O wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.zip
-curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/_remote.repositories -O _remote.repositories
-curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/maven-metadata-local.xml -O maven-metadata-local.xml
+# mkdir -p /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.6.CD.Alpha2-SNAPSHOT/
+# cd /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.6.CD.Alpha2-SNAPSHOT/
+# curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.pom -O wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.pom
+# curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.zip -O wildfly-datasources-galleon-pack-1.0.6.CD.Alpha2-SNAPSHOT.zip
+# curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/_remote.repositories -O _remote.repositories
+# curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.6.CD.Alpha2-SNAPSHOT/maven-metadata-local.xml -O maven-metadata-local.xml
+
+mkdir -p /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.7.CD.Final-SNAPSHOT/
+cd /opt/jboss/container/wildfly/s2i/galleon/galleon-m2-repository/org/wildfly/wildfly-datasources-galleon-pack/1.0.7.CD.Final-SNAPSHOT/
+curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.7.CD.Final-SNAPSHOT/wildfly-datasources-galleon-pack-1.0.7.CD.Final-SNAPSHOT.pom -O wildfly-datasources-galleon-pack-1.0.7.CD.Final-SNAPSHOT.pom
+curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.7.CD.Final-SNAPSHOT/wildfly-datasources-galleon-pack-1.0.7.CD.Final-SNAPSHOT.zip -O wildfly-datasources-galleon-pack-1.0.7.CD.Final-SNAPSHOT.zip
+curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.7.CD.Final-SNAPSHOT/_remote.repositories -O _remote.repositories
+curl http://download.eng.brq.redhat.com/scratch/ochaloup/1.0.7.CD.Final-SNAPSHOT/maven-metadata-local.xml -O maven-metadata-local.xml
 
 cd -
 
