@@ -14,8 +14,8 @@
     <config model="standalone" name="standalone.xml">
         <layers>
             <include name="cloud-server"/>
-            <include name="oracle-datasource"/>
-            <!--<include name="postgresql-driver"/>-->
+            <include name="oracle-10-driver"/>
+            <include name="postgresql-driver"/>
         </layers>
     </config>
     <options>
